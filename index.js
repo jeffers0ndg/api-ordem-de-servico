@@ -9,5 +9,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 require('./controllers/usuarioController')(app)
 require('./controllers/clienteController')(app)
+require('./controllers/ordemController')(app)
 
 app.listen(3000)

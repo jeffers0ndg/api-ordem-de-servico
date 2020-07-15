@@ -13,12 +13,11 @@ const OrdemSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
-      Cliente: {
+      cliente: {
           type: mongoose.Schema.Types.ObjectId,
           ref: 'Cliente',
-          required: true,
       },
-      Finalizada: {
+      finalizada: {
         type: Boolean,
         require: true,
         default: false,
@@ -28,11 +27,6 @@ const OrdemSchema = new mongoose.Schema({
         default: Date.now,
       }
 })
-
-
-
-
-
 
 const Ordem= mongoose.model('Ordem', OrdemSchema)
 

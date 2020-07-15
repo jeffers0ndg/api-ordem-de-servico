@@ -59,7 +59,8 @@ router.put('/:usuarioId', async (req, res) => {
 
     const usuario = await Usuario.findByIdAndUpdate(req.params.usuarioId, {
       nome,
-      email
+      email,
+      senha
     }, { new: true });
 
     return res.send({ usuario })
